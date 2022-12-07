@@ -14,6 +14,8 @@ import { AdmnavbarComponent } from './admnavbar/admnavbar.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserregComponent } from './userreg/userreg.component';
 import { UserviewComponent } from './userview/userview.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 
 const myroute:Routes=[
   {
@@ -56,7 +58,9 @@ const myroute:Routes=[
     AdmnavbarComponent,
     UserloginComponent,
     UserregComponent,
-    UserviewComponent
+    UserviewComponent,
+    NavbarComponent,
+    UsernavbarComponent
   ],
   imports: [
     BrowserModule,
