@@ -13,14 +13,20 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label"><h3>Username</h3></label>
-                    <input type="text" class="form-control">
+                    <input name="username" [(ngModel)]="username" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label"><h3>Password</h3></label>
-                    <input type="text" class="form-control">
+                    <input name="password" [(ngModel)]="password" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button  class="btn btn-info">LOGIN</button>
+                    <button (click)="adminlog()"  class="btn btn-primary">LOGIN</button>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a routerLink="/ulogin"><h4>Click here for User Login ---></h4></a>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a routerLink="/ureg"><h4>Click here for User Registration ---></h4></a>
                 </div>
             </div>
         </div>
