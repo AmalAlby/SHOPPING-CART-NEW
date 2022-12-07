@@ -30,24 +30,30 @@ export class UserregComponent {
   }
   console.log(data)
 
-  this.api.adduser(data).subscribe(
-    (response:any)=>{
-      console.log(response)
-      if(response.status=="success" && this.password==this.cpassword){
-        alert("Registered Successfully...Going back to login")
-        this.name=""
-        this.address=""
-        this.emailid=""
-        this.phonenumber=""
-        this.password=""
-        this.cpassword=""
-        this.route.navigate(["/ulogin"])
+  if(this.password==this.cpassword){
+
+    this.api.adduser(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if(response.status=="success"){
+          alert("Registered Successfully...Going back to login")
+          this.name=""
+          this.address=""
+          this.emailid=""
+          this.phonenumber=""
+          this.password=""
+          this.cpassword=""
+          this.route.navigate(["/ulogin"])
+        }
       }
-      else{
-        alert("Something Went Wrong")
-      }
-    }
-  )
+    )
+
+  }
+  else{
+    alert("Something Went Wrong")
+  }
+
+
 
   }
 

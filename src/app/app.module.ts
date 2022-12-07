@@ -15,6 +15,8 @@ import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserregComponent } from './userreg/userreg.component';
 import { UserviewComponent } from './userview/userview.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { UsersearchComponent } from './usersearch/usersearch.component';
 
 const myroute:Routes=[
   {
@@ -44,6 +46,10 @@ const myroute:Routes=[
   {
     path:"uview",
     component:UserviewComponent
+  },
+  {
+    path:"usearch",
+    component:UsersearchComponent
   }
 ]
 
@@ -58,7 +64,9 @@ const myroute:Routes=[
     UserloginComponent,
     UserregComponent,
     UserviewComponent,
-    UsernavbarComponent
+    UsernavbarComponent,
+    NavbarComponent,
+    UsersearchComponent
   ],
   imports: [
     BrowserModule,
