@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-success">
+
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1><b>SEARCH PRODUCT</b></h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label"><h3>PRODUCT NAME</h3></label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="read()" class="btn btn-success"><h4>SEARCH</h4></button>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 text-center" *ngFor="let i of searchdata">
+                    <div class="card" style="width: 18rem; height:400px;">
+                        <img src="{{i.imagelink}}" class="card-img-top" alt="..." style="height: 200px ;">
+                        <div class="card-body">
+                          <h4 class="card-title">{{i.name}}</h4>
+                          <p class="card-text">{{i.category}}</p>
+                          <p class="card-text">PRICE : {{i.price}}</p>
+                          <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

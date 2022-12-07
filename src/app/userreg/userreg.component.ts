@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class UserregComponent {
   password=""
   cpassword=""
 
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private route:Router){}
+  
 
   read=()=>{
     let data:any= {
@@ -28,23 +30,30 @@ export class UserregComponent {
   }
   console.log(data)
 
-  this.api.adduser(data).subscribe(
-    (response:any)=>{
-      console.log(response)
-      if(response.status=="success" && this.password==this.cpassword){
-        alert("Added Successfully")
-        this.name=""
-        this.address=""
-        this.emailid=""
-        this.phonenumber=""
-        this.password=""
-        this.cpassword=""
+  if(this.password==this.cpassword){
+
+    this.api.adduser(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if(response.status=="success"){
+          alert("Registered Successfully...Going back to login")
+          this.name=""
+          this.address=""
+          this.emailid=""
+          this.phonenumber=""
+          this.password=""
+          this.cpassword=""
+          this.route.navigate(["/ulogin"])
+        }
       }
-      else{
-        alert("Something Went Wrong")
-      }
-    }
-  )
+    )
+
+  }
+  else{
+    alert("Something Went Wrong")
+  }
+
+
 
   }
 
