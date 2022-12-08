@@ -1,5 +1,5 @@
 <style>
-    .bgm{background-image:url('https://th.bing.com/th/id/OIP.yVl6mTDiWp7Kp9RNJVkY1gHaD5?pid=ImgDet&rs=1')}
+    .bgm{background-image:url('https://th.bing.com/th/id/OIP.hXp7QCQ7Nt3rXJvXzjdgigHaEK?pid=ImgDet&rs=1')}
 </style>
 <div class="bgm" style="height:1000px">
 
@@ -17,7 +17,7 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="fom-control"><h3>Address</h3></label>
-                    <textarea name="address" [(ngModel)]="address" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="address" [(ngModel)]="address" id="" cols="30" rows="5" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label"><h3>Phone Number</h3></label>
@@ -36,7 +36,10 @@
                     <input name="cpassword" [(ngModel)]="cpassword" type="password" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button (click)="read()" class="btn btn-primary"><h5>REGISTER</h5></button>
+                    <button (click)="read()" class="btn btn-success"><h5>REGISTER</h5></button>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a routerLink="/"><h4>GO TO ADMIN LOGIN</h4></a>
                 </div>
             </div>
         </div>
