@@ -10,6 +10,7 @@
                     <table class="table table-striped">
                         <thead>
                           <tr>
+                            <th scope="col">ID</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Category</th>
                             <th scope="col">Price</th>
@@ -18,10 +19,11 @@
                         </thead>
                         <tbody>
                           <tr  *ngFor="let i of data">
-                            <th scope="row">{{i.name}}</th>
+                            <th scope="row">{{i.id}}</th>
+                            <td>{{i.name}}</td>
                             <td>{{i.category}}</td>
                             <td>{{i.price}}</td>
-                            <td>{{i.imagelink}}</td>
+                            <td><img src="{{i.imagelink}}" alt="" style="width:18rem ; height:200px;"></td>
                           </tr>
                         </tbody>
                       </table>
